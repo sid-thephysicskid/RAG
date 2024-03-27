@@ -35,12 +35,12 @@ def main():
         col1, col2 = st.columns(2)
         with col1:
             ask_button = st.button("Get Answer")
-        with col2:
-            clear_button = st.button("Clear")
+        # with col2:
+        #     clear_button = st.button("Clear")
 
-    if clear_button:
-        st.session_state["question_input"] = ""
-        answer_container.empty()
+    # if clear_button:
+    #     st.session_state["question_input"] = ""
+    #     answer_container.empty()
 
     if ask_button and question.strip() != "":
         with st.spinner("Generating answer..."):
