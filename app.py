@@ -14,7 +14,7 @@ def initialize_components():
     index = pc.Index(index_name)
     vectorstore = PineconeVectorStore(index, embed, text_field)
     llm = ChatOpenAI(openai_api_key=st.secrets["OPENAI_API_KEY"], model_name='gpt-4-turbo-preview', temperature=0.0)
-    qa_with_sources = RetrievalQAWithSourcesChain.from_chain_type(llm=llm, chain_type="stuff", retriever=vectorstore.as_retriever(search_kwargs={'k': 3}))
+    qa_with_sources = RetrievalQAWithSourcesChain.from_chain_type(llm=llm, chain_type="stuff", retriever=vectorstore.as_retriever(search_kwargs={'k': 5}))
     return qa_with_sources
 
 def main():
