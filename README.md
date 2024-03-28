@@ -1,1 +1,1 @@
-v0 of RAG built on Vol 1 and 2 of Mike Holt's NEC 2023 books
+v0 of RAG built on Vol 1 and 2 of National Electrical Code 2023 books
